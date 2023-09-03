@@ -161,7 +161,7 @@ const CalendarPicker = () => {
       enabled: !!selectedDay,
     });
   const listHours = blocksFromDB?.map((bHour) => bHour.hora);
-
+  console.log(blocksFromDB);
   if (!user) {
     return null;
   }
@@ -248,7 +248,7 @@ const CalendarPicker = () => {
       {bloqueHora && (
         <div className="btn btn-info mx-2">Eligio: {bloqueHora}</div>
       )}
-      {!isLoading && blocksFromDB?.length ? (
+      {!isLoading && day === now.getDate() && (
         <div className="flex flex-wrap justify-around">
           {tupleHorasLab.map((block, index) => (
             <button
@@ -263,15 +263,16 @@ const CalendarPicker = () => {
             </button>
           ))}
         </div>
-      ) : (
+      )}
+      {!isLoading && day !== now.getDate() && (
         <div className="flex flex-wrap justify-around">
           {tupleHorasLab.map((block, index) => (
             <button
-              disabled={disabledCalc(block.hora)}
+              disabled={listHours?.includes(block.hora)}
               key={index}
               onClick={() => handleButtonClick(block.hora)}
               className={`${
-                disabledCalc(block.hora) ? "" : "btn-success"
+                listHours?.includes(block.hora) ? "" : "btn-success"
               } btn my-2`}
             >
               {block.hora}
