@@ -1,0 +1,59 @@
+{
+  "name": "cabellos",
+  "version": "0.1.0",
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "postinstall": "prisma generate",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@clerk/localizations": "^1.24.1",
+    "@clerk/nextjs": "^4.23.2",
+    "@prisma/client": "^5.1.1",
+    "@t3-oss/env-nextjs": "^0.3.1",
+    "@tanstack/react-query": "^4.29.25",
+    "@trpc/client": "^10.34.0",
+    "@trpc/next": "^10.34.0",
+    "@trpc/react-query": "^10.34.0",
+    "@trpc/server": "^10.34.0",
+    "next": "^13.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-modern-calendar-datepicker": "^3.1.6",
+    "react-modern-drawer": "^1.2.2",
+    "superjson": "^1.13.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "zod": "^3.21.4",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.37.0",
+    "@types/node": "^18.17.8",
+    "@types/prettier": "^2.7.2",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^3.5.1",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.2",
+    "postcss": "^8.4.27",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "prisma": "^5.1.1",
+    "tailwindcss": "^3.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.18.0"
+  }
+}
