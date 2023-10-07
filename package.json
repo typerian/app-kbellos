@@ -30,7 +30,7 @@
     "react-modern-drawer": "^1.2.2",
     "superjson": "^1.13.1",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "zod": "^3.21.4",
+    "zod": "^3.22.3",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
